@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="feedback">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <title>银行卡</title>
+    <script src="./js/pubstyle.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./style/css/CommonML.css">
+</head>
+<style>
+
+</style>
+
+<body class="">
+    <div class="mask hide"></div>
+    <!-- 主体部分 -->
+    <main class="addbankCard mui-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll content">
+                <img class="logo_img" src="./images/logo.png" alt="">
+                <form action="">
+                    <ul class="loginBox">
+                        <li class="">
+                            <img src="./images/login_icon_shouji.png" alt="">
+                            <input autocomplete="off" type="text" placeholder="Mobile No.">
+                            <img class="clear_inp" src="./images/input_icon_close.png" alt="">
+                        </li>
+                        <li class="">
+                            <img src="./images/login_icon_code.png" alt="">
+                            <input autocomplete="off" maxlength="6" type="password" placeholder="Check Code">
+                            <img class="clear_inp" src="./images/input_icon_close.png" alt="">
+                            <span class="send">Gain</span>
+                        </li>
+                    </ul>
+                    <div class="fill-60"></div>
+                    <button class="btn_orange">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<!-- <script type="text/javascript" src="./js/mui.min.js" charset="utf-8"></script> -->
+<script type="text/javascript" src="./js/zepto.min.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    $$('input').on('click', function () {
+        var target = this;
+        setTimeout(function () {
+            target.scrollIntoViewIfNeeded();
+            console.log(target.scrollIntoViewIfNeeded());
+        }, 400);
+    });
+    //清除按钮
+    $$('input').on('focus', function () {
+        $$(this).siblings(".clear_inp").show()
+    })
+    $$('input').on('blur', function () {
+        setTimeout(() => {
+            $$(this).siblings(".clear_inp").hide()
+        }, 0);
+    })
+    $$(".clear_inp").on('click', function () {
+        $$(this).parent("li").find("input").val('')
+    })
+    $$(".send").on('click', function () {
+        $$(this).text("36s").css({
+            'color': '#A5A5A5',
+            'border-color': '#A5A5A5'
+        })
+    })
+
+    /* mui.ready(function () {
+        mui.init()
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        // 弹性插件
+        mui('.mui-scroll-wrapper').scroll({
+            scrollY: true, //是否竖向滚动
+            scrollX: false, //是否横向滚动
+            startX: 0, //初始化时滚动至x
+            startY: 0, //初始化时滚动至y
+            indicators: false, //是否显示滚动条
+            deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+            bounce: true //是否启用回弹
+        });
+    }) */
+</script>
+
+</html>

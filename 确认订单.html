@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" class="feedback">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <title>银行卡</title>
+    <script src="./js/pubstyle.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./style/css/CommonML.css">
+</head>
+<style>
+
+</style>
+
+<body class="">
+    <div class="mask hide"></div>
+    <!-- 主体部分 -->
+    <main class="addbankCard mui-content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll orderNum">
+                <div class="title_bar">确认订单</div>
+                <div class="fill-20"></div>
+                <p class="text1">订单专拍（付款项目名称）</p>
+                <div class="text_num">
+                    RM <span>1.00</span>
+                </div>
+                <div class="text2">Total Payment</div>
+                <div class="fill-15"></div>
+                <div class="line"></div>
+                <section class="orderInfo" id="scroll">
+                    <ul>
+                        <li>
+                            <span>Merchant name</span>
+                            <div>McDonald's</div>
+                        </li>
+                        <li>
+                            <span>Description</span>
+                            <div>Pay</div>
+                        </li>
+                        <li>
+                            <span>Payment method</span>
+                            <div>Ewallet</div>
+                        </li>
+                        <li>
+                            <span>Order amount</span>
+                            <div>RM 1.00</div>
+                        </li>
+                        <li>
+                            <span>Order amount</span>
+                            <div>RM 1.00</div>
+                        </li>
+                        <li>
+                            <span>Cash Rebate</span>
+                            <div>-RM 0</div>
+                            <div class="textRight">Select <span></span>8</span></div>
+                        </li>
+                        <div class="fill-20"></div>
+                    </ul>
+                </section>
+                <div class="line"></div>
+                <div class="fill-20"></div>
+                <div class="sendCode">
+                    <input type="number">
+                    <button>Resend</button>
+                </div>
+                <div class="fill-30"></div>
+                <button class="btn_gray">Confirm</button>
+            </div>
+        </div>
+
+
+        <!-- 弹窗 -->
+        <div class="orderPopup">
+            <div>Select <span>8</span><img src="./images/icon_close.png" alt=""></div>
+            <ul id="orderPopup">
+                <div>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./images/logo_chushi.png" alt="">
+                        <div>
+                            <p>Burger King</p>
+                            <p>RM 0.10</p>
+                            <p>Min Spend RM 20 </p>
+                            <p>Valid Until 15 September,2018 10:45 AM</p>
+                        </div>
+                    </li>
+                    <div class="fill-20"></div>
+                </div>
+            </ul>
+        </div>
+    </main>
+</body>
+<!-- <script type="text/javascript" src="./js/mui.min.js" charset="utf-8"></script> -->
+<script type="text/javascript" src="./js/zepto.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./js/iscroll.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    var myScroll1 = new IScroll("#scroll")
+    var myScroll2 = new IScroll("#orderPopup")
+
+    setTimeout(() => {
+        $$(".orderPopup").addClass("animate_pup")
+    }, 100);
+$$(".closepopup").on('click', function () {
+$$(this).parents(".orderPopup").removeClass("animate_pup").remove()
+})
+    /* mui.ready(function () {
+        mui.init()
+        mui.init({
+            swipeBack: true //启用右滑关闭功能
+        });
+        // 弹性插件
+        mui('.mui-scroll-wrapper').scroll({
+            scrollY: true, //是否竖向滚动
+            scrollX: false, //是否横向滚动
+            startX: 0, //初始化时滚动至x
+            startY: 0, //初始化时滚动至y
+            indicators: false, //是否显示滚动条
+            deceleration: 0.0006, //阻尼系数,系数越小滑动越灵敏
+            bounce: true //是否启用回弹
+        });
+    }) */
+</script>
+
+</html>
