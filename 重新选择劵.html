@@ -162,7 +162,13 @@
 <script type="text/javascript" charset="utf-8">
     var myScroll1 = new IScroll("#scroll")
     var myScroll2 = new IScroll("#orderPopup")
-
+    $$('input').on('click', function () {
+        var target = this;
+        setTimeout(function () {
+            target.scrollIntoViewIfNeeded();
+            console.log(target.scrollIntoViewIfNeeded());
+        }, 200);
+    });
     setTimeout(() => {
         $$(".orderPopup").addClass("animate_pup")
     }, 100);

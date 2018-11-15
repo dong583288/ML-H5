@@ -63,7 +63,7 @@
                         <img src="./images/icon_tishi.png" alt="">
                         <span>请输入账户的<span class="font_red">payment code</span>，不是登录密码</span>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -78,7 +78,13 @@
 <script type="text/javascript" src="./js/zepto.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="./js/iscroll.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
-
+    $$('input').on('click', function () {
+        var target = this;
+        setTimeout(function () {
+            target.scrollIntoViewIfNeeded();
+            console.log(target.scrollIntoViewIfNeeded());
+        }, 200);
+    });
 </script>
 
 </html>
